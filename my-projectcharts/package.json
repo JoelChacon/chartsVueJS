@@ -1,6 +1,6 @@
 {
-  "name": "starwars",
-  "description": "using a starwars API",
+  "name": "Charts",
+  "description": "VueJS app",
   "version": "1.0.0",
   "author": "Joel Chacon",
   "private": true,

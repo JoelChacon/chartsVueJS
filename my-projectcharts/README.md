@@ -1,6 +1,6 @@
-# starwars
+# Charts
 
-> using a starwars API
+>charts for review analytics
 
 ## Build Setup
 
