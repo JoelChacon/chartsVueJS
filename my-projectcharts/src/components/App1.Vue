@@ -1,12 +1,8 @@
 <template>
-<div id="app3">
-    
-    <div class="row">
-        <div class="col-sm-12">
-            <h3>Get data from Appbot API</h3>
-        </div>
+<div>    
+    <div class="text-center">
+        <h3>Data from Appbot API</h3>
     </div>
-    
     <div class="row">
         <div class="col-sm-6">
             <table class="table">
@@ -34,7 +30,7 @@
             </table>
         </div>
         <div class="col-sm-6">
-            <highcharts class="ratingsChart" :options="chart_options" ref="highcharts"></highcharts>
+            <highcharts class="ratingsChart" :options="chartOptions" ref="highcharts"></highcharts>
         </div>
     </div>
     
@@ -48,12 +44,14 @@
 </style>
 <!-- //////////////////////// -->
 <script>
-    var chart_colors = ['#9fc05a', '#add633', '#ffd834', '#ffb234', '#ff8b5a'];
-    var chart_options = {
+    import Vue from 'vue'
+    Vue.use(VueHighcharts);
+    var chartColors = ['#9fc05a', '#add633', '#ffd834', '#ffb234', '#ff8b5a'];
+    var chartOptions = {
         chart: {
             type: 'bar'
         },
-        colors: chart_colors,
+        colors: chartColors,
         title: {
             text: ''
         },
@@ -94,7 +92,7 @@
         name: '',
         data () {
             return {
-                chart_options: chart_options,
+                chartOptions: chartOptions,
                 rating_average: 0, 
                 total_count: 0, 
                 star_5_count: 0, 
